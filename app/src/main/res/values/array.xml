@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pill_unit_array">
+        <item>ампулы</item>
+        <item>единицы</item>
+        <item>капсулы</item>
+        <item>саше</item>
+        <item>таблетки</item>
+        <item>штуки</item>
+        <item>граммы</item>
+        <item>миллиграммы</item>
+        <item>миллилитры</item>
+    </string-array>
+</resources>

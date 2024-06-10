@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.NewScheduleFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/new_schedule_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/appbar_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:title="Новая запись">
+
+            <ImageButton
+                android:id="@+id/cancel_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:background="@drawable/cancel_button_selector"
+                android:src="@drawable/cancel"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/start_date_linear"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/input_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/new_schedule_appbar_layout">
+
+
+        <TextView
+            android:id="@+id/start_date_title"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата начала приема"
+            android:textAppearance="@style/Text.ScheduleTimeText"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:text="18 апр."
+            app:icon="@drawable/edit"
+            app:iconGravity="textEnd"
+            android:textAppearance="@style/Text.ScheduleTimeText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/end_date_linear"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/input_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/start_date_linear">
+
+        <TextView
+            android:id="@+id/end_date_title"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата конца приема"
+            android:textAppearance="@style/Text.ScheduleTimeText"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/end_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="18dp"
+            android:text="18 апр."
+            app:icon="@drawable/edit"
+            app:iconGravity="textEnd"
+            android:textAppearance="@style/Text.ScheduleTimeText"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/week_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/input_field"
+        app:layout_constraintTop_toBottomOf="@id/end_date_linear">
+
+        <TextView
+            android:id="@+id/week_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Дни недели"
+            android:textAppearance="@style/Text.ScheduleTimeText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/week_linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/week_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/week_monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пн"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вт"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ср"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Чт"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пт"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сб"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вс"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/time_slot_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/input_field"
+        app:layout_constraintTop_toBottomOf="@id/week_constraint"
+        app:layout_constraintBottom_toTopOf="@id/guideline_50">
+
+        <TextView
+            android:id="@+id/time_slot_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Время приема"
+            android:textAppearance="@style/Text.ScheduleTimeText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/time_slot_recycler"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            tools:itemCount="1"
+            tools:listitem="@layout/linear_slot_item"
+            app:layout_constraintTop_toBottomOf="@id/time_slot_title"
+            app:layout_constraintBottom_toTopOf="@id/add_time_slot_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_time_slot_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Добавить время приема"
+            app:iconSize="20dp"
+            app:icon="@drawable/clock"
+            app:iconGravity="textEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pill_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/input_field"
+        app:layout_constraintTop_toBottomOf="@id/guideline_50"
+        app:layout_constraintBottom_toTopOf="@id/guideline_90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/pills_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Лекарства"
+            android:textAppearance="@style/Text.ScheduleTimeText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pills_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pills_title"
+            tools:listitem="@layout/pill_pick_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_new_schedule_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Добавить новую запись"
+        app:iconSize="30dp"
+        app:icon="@drawable/schedule"
+        app:iconGravity="textEnd"
+        app:layout_constraintTop_toBottomOf="@id/guideline_90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

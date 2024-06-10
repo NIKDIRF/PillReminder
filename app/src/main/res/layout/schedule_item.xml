@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/schedule_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/schedule_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/start_end_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="C 18 апр. до 20 мая"
+            android:textAppearance="@style/Text.ScheduleTimeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/week_linear"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/start_end_date_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/time_slots_layout">
+
+            <TextView
+                android:id="@+id/week_monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пн"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вт"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ср"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Чт"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пт"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сб"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+            <TextView
+                android:id="@+id/week_sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вс"
+                android:padding="5dp"
+                android:layout_marginHorizontal="3dp"
+                android:textAppearance="@style/Text.WeekText"
+                android:textColor="@color/white"
+                android:background="@drawable/week_circle"/>
+
+        </LinearLayout>
+
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/time_slots_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_start"
+            app:layout_constraintTop_toBottomOf="@id/week_linear"
+            app:layout_constraintBottom_toTopOf="@id/pills_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pills_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/blue_100"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/time_slots_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_v80"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pill_count"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Text.Header3"
+                    android:gravity="center"
+                    android:text="Принять 5 лекарств"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:id="@+id/text_pill_item_linear"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/schedule_delete_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/cancel"
+            android:background="@drawable/cancel_button_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

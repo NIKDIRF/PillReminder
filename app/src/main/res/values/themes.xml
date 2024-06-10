@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Pills" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/blue_300</item>
+        <item name="colorPrimaryVariant">@color/blue_400</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_300</item>
+        <item name="colorSecondaryVariant">@color/red_400</item>
+        <item name="colorOnSecondary">@color/grey_500</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/grey_500</item>
+        <item name="android:textColorSecondary">@color/grey_300</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:textColorHighlight">@color/red_300</item>
+        <item name="colorSurfaceContainer">@color/blue_100</item>
+        <item name="colorSecondaryContainer">@color/blue_150</item>
+        <item name="colorOnSurface">@color/grey_500</item>
+        <item name="colorOnSurfaceVariant">@color/grey_500</item>
+        <item name="colorSurfaceContainerHighest">@color/blue_150</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorPrimaryContainer">@color/blue_150</item>
+        <item name="colorOnPrimaryContainer">@color/blue_500</item>
+        <item name="colorSurfaceContainerLow">@color/blue_50</item>
+
+        <item name="android:fontFamily">@font/golos</item>
+
+        <item name="textAppearanceBodySmall">@style/Text.Label</item>
+        <item name="textAppearanceBodyMedium">@style/Text.Body1</item>
+        <item name="textAppearanceBodyLarge">@style/Text.Body1</item>
+        <item name="textAppearanceTitleSmall">@style/Text.Body1</item>
+        <item name="textAppearanceTitleMedium">@style/Text.Header2</item>
+        <item name="textAppearanceTitleLarge">@style/Text.Header1</item>
+        <item name="textAppearanceHeadlineSmall">@style/Text.Header3</item>
+        <item name="textAppearanceHeadlineMedium">@style/Text.Header2</item>
+        <item name="textAppearanceHeadlineLarge">@style/Text.Header1</item>
+        <item name="textAppearanceLabelSmall">@style/Text.Label</item>
+        <item name="textAppearanceLabelMedium">@style/Text.Label</item>
+        <item name="textAppearanceLabelLarge">@style/Text.Label.Highlight</item>
+
+    </style>
+
+    <style name="Theme.Pills" parent="Base.Theme.Pills" />
+</resources>

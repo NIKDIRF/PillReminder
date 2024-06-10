@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/scheduleFragment"
+        android:icon="@drawable/calendar_defoult"
+        android:title="Расписание" />
+    <item
+        android:id="@+id/statFragment"
+        android:icon="@drawable/progress"
+        android:title="Прогресс" />
+    <item
+        android:id="@+id/pillsFragment"
+        android:icon="@drawable/aid_kit"
+        android:title="Аптечка" />
+</menu>
